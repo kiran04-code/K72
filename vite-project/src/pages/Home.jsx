@@ -5,8 +5,8 @@ import ButtomText from '../components/Home/ButtomText'
 
 const Home = () => {
     return (
-        <div>
-            <div className='h-screen w-screen fixed '>
+        <div className='text-white '>
+            <div className='h-screen w-screen fixed text-white '>
                 <Video />
 
             </div>

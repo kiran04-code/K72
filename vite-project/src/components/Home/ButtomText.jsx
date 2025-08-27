@@ -1,16 +1,23 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const ButtomText = () => {
+    const navigate = useNavigate()
     return (
-        <div className='flex justify-center gap-2 '>
-            <div className='border-3 h-25 pb-4 justify-center items-center flex px-10 border-white rounded-full uppercase hover:text-[#d3ff44] '>
-                <Link to={"/Project"} className='text-[6vw] mt-6  ' >Project</Link>
-            </div>
-            <div className='border-3  h-25 pb-4 justify-center items-center flex px-10 border-white rounded-full uppercase hover:text-[#d3ff44] '>
-                <Link to={"/Agent"} className='text-[6vw] mt-6  ' >Agence</Link>
-            </div>
-          
+        <div className='flex justify-center gap-4'>
+            <Link
+                to="/Project"
+                className='flex items-center justify-center px-10 h-[6.25rem] border-[3px] border-white rounded-full uppercase text-[6vw] cursor-pointer hover:text-[#d3ff44]'
+            >
+                Project
+            </Link>
+
+            <span
+                onClick={()=>navigate("/Agent")}
+                className='flex items-center justify-center px-10 h-[6.25rem] border-[3px]   border-white rounded-full uppercase text-[6vw] cursor-pointer hover:text-[#d3ff44]'
+            >
+                Agence
+            </span>
         </div>
     )
 }
